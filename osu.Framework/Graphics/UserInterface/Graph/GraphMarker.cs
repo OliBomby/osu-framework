@@ -25,7 +25,7 @@ namespace osu.Framework.Graphics.UserInterface.Graph
 
         public Direction Orientation { get; set; }
 
-        public string Text { get; set; }
+        public string? Text { get; set; }
 
         public double Value { get; set; }
 

@@ -10,7 +10,7 @@ using osuTK.Input;
 
 namespace osu.Framework.Graphics.UserInterface.Graph
 {
-    public abstract class GraphPointControl : UserControl
+    public abstract class GraphPointControl : Drawable
     {
         protected bool IsDragging;
         protected int IgnoreDrag;
@@ -34,12 +34,6 @@ namespace osu.Framework.Graphics.UserInterface.Graph
                 SetSize(Size);
             }
         }
-
-        public static readonly DependencyProperty GraphProperty =
-            DependencyProperty.Register(nameof(Graph),
-                typeof(Graph),
-                typeof(GraphPointControl),
-                new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.None));
 
         [JsonIgnore]
         public Graph Graph

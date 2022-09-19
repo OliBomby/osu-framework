@@ -55,7 +55,7 @@ namespace osu.Framework.Graphics.UserInterface.Graph.Markers
 
             while (v <= end + Precision.DOUBLE_EPSILON)
             {
-                string text = ValueToString != null ? ValueToString(v) : null;
+                string? text = ValueToString?.Invoke(v);
                 yield return new GraphMarker
                 {
                     Orientation = orientation,
